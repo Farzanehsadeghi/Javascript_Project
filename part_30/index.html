@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      function person(fname,lname,age){
+        this.firstname = fname;
+        this.lastname = lname;
+        this.age = age;
+      }
+      const person1 = new person("ali","hasani",50);
+      const person2 = new person("reza","maghami",50);
+
+      document.getElementById("demo").innerHTML= (person1.firstname + " " + person1.lastname).toUpperCase;
+    </script>
+    
+  </body>
+</html>

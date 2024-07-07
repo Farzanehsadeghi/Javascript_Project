@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      * {
+        direction: rtl;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        padding-right: 2%;
+        font-family: vazirmatn;
+      }
+      header {
+        background-color: lightgray;
+        padding-bottom: 2%;
+        padding-top: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p id="demo"></p>
+      <script>
+        
+        const menu = [{
+          title: "خانه",
+          URL:"https://www.apple.com/",
+          tooltip: "home"},
+
+          {
+          title: " محصولات ",
+          URL: "https://www.microsoft.com/en-us/",
+          tooltip: "product",
+          },
+          
+          {
+          title: "ارتباط با ما",
+          URL: "https://yahoo.com",
+          tooltip: "relation"},
+
+          {
+          title: "درباره ما",
+          URL: "https://ea.com",
+          tooltip: "introduction"
+        }];
+
+        function menuCreator(menuItems) {
+        
+        let text = "";
+        for ( let i = 0; i < menuItems.length; i++) {
+          text += "  " + "<a href='"+menuItems[i].URL+"'  tooltip='" + menuItems[i].tooltip +  "'>"       
+             +menuItems[i].title+ "</a>";
+        }
+      
+        return text;
+      }
+      document.getElementById("demo").innerHTML = menuCreator(menu);
+      </script>
+    </header>
+  </body>
+</html>
